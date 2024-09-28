@@ -1,10 +1,10 @@
 # Zephyr Example Application
 
-<a href="https://github.com/Robostyl/zephyr-promicro/actions/workflows/build.yml?query=branch%3Amain">
-  <img src="https://github.com/Robostyl/zephyr-promicro/actions/workflows/build.yml/badge.svg?event=push">
+<a href="https://github.com/Robostyle/zephyr-promicro/actions/workflows/build.yml?query=branch%3Amain">
+  <img src="https://github.com/Robostyle/zephyr-promicro/actions/workflows/build.yml/badge.svg?event=push">
 </a>
-<a href="https://github.com/Robostyl/zephyr-promicro/actions/workflows/docs.yml?query=branch%3Amain">
-  <img src="https://github.com/Robostyl/zephyr-promicro/actions/workflows/docs.yml/badge.svg?event=push">
+<a href="https://github.com/Robostyle/zephyr-promicro/actions/workflows/docs.yml?query=branch%3Amain">
+  <img src="https://github.com/Robostyle/zephyr-promicro/actions/workflows/docs.yml/badge.svg?event=push">
 </a>
 <a href="https://zephyrproject-rtos.github.io/example-application/doxygen">
   <img alt="API Documentation" src="https://img.shields.io/badge/API-documentation-3D578C?logo=c&logoColor=white">
@@ -34,7 +34,7 @@ command:
 
 ```shell
 # initialize my-workspace for the example-application (main branch)
-west init -m https://github.com/Robostyl/zephyr-promicro --mr main my-workspace
+west init -m https://github.com/Robostyle/zephyr-promicro --mr main my-workspace
 # update Zephyr modules
 cd my-workspace
 west update
