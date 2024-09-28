@@ -1,40 +1,14 @@
 # Zephyr Example Application
 
-<a href="https://github.com/zephyrproject-rtos/example-application/actions/workflows/build.yml?query=branch%3Amain">
-  <img src="https://github.com/zephyrproject-rtos/example-application/actions/workflows/build.yml/badge.svg?event=push">
+<a href="https://github.com/Robostyl/zephyr-promicro/actions/workflows/build.yml?query=branch%3Amain">
+  <img src="https://github.com/Robostyl/zephyr-promicro/actions/workflows/build.yml/badge.svg?event=push">
 </a>
-<a href="https://github.com/zephyrproject-rtos/example-application/actions/workflows/docs.yml?query=branch%3Amain">
-  <img src="https://github.com/zephyrproject-rtos/example-application/actions/workflows/docs.yml/badge.svg?event=push">
-</a>
-<a href="https://zephyrproject-rtos.github.io/example-application">
-  <img alt="Documentation" src="https://img.shields.io/badge/documentation-3D578C?logo=sphinx&logoColor=white">
+<a href="https://github.com/Robostyl/zephyr-promicro/actions/workflows/docs.yml?query=branch%3Amain">
+  <img src="https://github.com/Robostyl/zephyr-promicro/actions/workflows/docs.yml/badge.svg?event=push">
 </a>
 <a href="https://zephyrproject-rtos.github.io/example-application/doxygen">
   <img alt="API Documentation" src="https://img.shields.io/badge/API-documentation-3D578C?logo=c&logoColor=white">
 </a>
-
-This repository contains a Zephyr example application. The main purpose of this
-repository is to serve as a reference on how to structure Zephyr-based
-applications. Some of the features demonstrated in this example are:
-
-- Basic [Zephyr application][app_dev] skeleton
-- [Zephyr workspace applications][workspace_app]
-- [Zephyr modules][modules]
-- [West T2 topology][west_t2]
-- [Custom boards][board_porting]
-- Custom [devicetree bindings][bindings]
-- Out-of-tree [drivers][drivers]
-- Out-of-tree libraries
-- Example CI configuration (using GitHub Actions)
-- Custom [west extension][west_ext]
-- Doxygen and Sphinx documentation boilerplate
-
-This repository is versioned together with the [Zephyr main tree][zephyr]. This
-means that every time that Zephyr is tagged, this repository is tagged as well
-with the same version number, and the [manifest](west.yml) entry for `zephyr`
-will point to the corresponding Zephyr tag. For example, the `example-application`
-v2.6.0 will point to Zephyr v2.6.0. Note that the `main` branch always
-points to the development branch of Zephyr, also `main`.
 
 [app_dev]: https://docs.zephyrproject.org/latest/develop/application/index.html
 [workspace_app]: https://docs.zephyrproject.org/latest/develop/application/index.html#zephyr-workspace-app
@@ -60,7 +34,7 @@ command:
 
 ```shell
 # initialize my-workspace for the example-application (main branch)
-west init -m https://github.com/zephyrproject-rtos/example-application --mr main my-workspace
+west init -m https://github.com/Robostyl/zephyr-promicro --mr main my-workspace
 # update Zephyr modules
 cd my-workspace
 west update
@@ -77,7 +51,7 @@ west build -b $BOARD app
 
 where `$BOARD` is the target board.
 
-You can use the `custom_plank` board found in this
+You can use the `promicro` board found in this
 repository. Note that Zephyr sample boards may be used if an
 appropriate overlay is provided (see `app/boards`).
 
