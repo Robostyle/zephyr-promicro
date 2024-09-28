@@ -33,15 +33,15 @@ jobs:
           mv _build_doxygen/html deploy/doxygen
           mv _build_sphinx/html/* deploy
 
-      - name: Setup pages
-        if: github.event_name != 'pull_request'
-        uses: actions/configure-pages@v4
-
-      - name: Upload pages artifact
-        if: github.event_name != 'pull_request'
-        uses: actions/upload-pages-artifact@v3
-        with:
-          path: doc/deploy
+      # - name: Setup pages
+      #   if: github.event_name != 'pull_request'
+      #   uses: actions/configure-pages@v4
+      #
+      # - name: Upload pages artifact
+      #   if: github.event_name != 'pull_request'
+      #   uses: actions/upload-pages-artifact@v3
+      #   with:
+      #     path: doc/deploy
 
       - name: Upload artifacts
         if: github.event_name == 'pull_request'
