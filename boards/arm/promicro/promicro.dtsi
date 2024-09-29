@@ -6,27 +6,35 @@
 /dts-v1/;
 #include <nordic/nrf52840_qiaa.dtsi>
 #include "promicro-pinctrl.dtsi"
+#include "arduino_pro_micro_pins.dtsi"
 
 / {
 	model = "ProMicro";
 	compatible = "vendor,promicro";
 
 	chosen {
-        zephyr,code-partition = &code_partition;
-        zephyr,sram = &sram0;
-        zephyr,flash = &flash0;
+		zephyr,code-partition = &code_partition;
+		zephyr,sram = &sram0;
+		zephyr,flash = &flash0;
+
 		zephyr,console = &uart0;
 	};
 
-	blink_led: blink-led {
-		compatible = "blink-gpio-led";
-		led-gpios = <&gpio0 15 GPIO_ACTIVE_LOW>;
-		blink-period-ms = <1000>;
+	leds {
+		compatible = "gpio-leds";
+		led0_red: led_0 {
+			gpios = <&gpio0 15 GPIO_ACTIVE_LOW>;
+			label = "Red LED 0";
+		};
+	};
+	
+	aliases {
+		led0 = &led0_red;
 	};
 };
 
-&uicr {
-	gpio-as-nreset;
+&adc {
+    status = "okay";
 };
 
 &gpiote {
@@ -34,6 +42,10 @@
 };
 
 &gpio0 {
+	status = "okay";
+};
+
+&gpio1 {
 	status = "okay";
 };
 
@@ -45,6 +57,10 @@
 	pinctrl-0 = <&uart0_default>;
 	pinctrl-1 = <&uart0_sleep>;
 	pinctrl-names = "default", "sleep";
+};
+
+zephyr_udc0: &usbd {
+    status = "okay";
 };
 
 &flash0 {
