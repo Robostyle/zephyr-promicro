@@ -1,0 +1,12 @@
+file_format: "1"
+id: stellar
+name: STELLAR
+type: shield
+url: https://github.com/Robostyle/STELLAR
+requires: [promicro]
+exposes: [i2c_oled]
+features:
+  - keys
+siblings:
+  - stellar_left
+  - stellar_right
